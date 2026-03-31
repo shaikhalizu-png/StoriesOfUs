@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoriesOfUs - Presentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --dark-blue: #1e40af;
+            --light-blue: #dbeafe;
+            --accent: #6366f1;
+        }
+        .reveal {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+        }
+        .reveal .slides section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 0;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: white;
+            text-transform: none;
+            font-weight: 700;
+        }
+        .reveal h1 { font-size: 1.8em; }
+        .reveal h2 { font-size: 1.3em; }
+        .reveal p, .reveal li { font-size: 0.7em; }
+        .content-box {
+            background: rgba(255,255,255,0.95);
+            color: #1f2937;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 10px 0;
+            text-align: left;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .content-box ul { margin: 0; padding-left: 18px; }
+        .content-box li { margin: 6px 0; line-height: 1.4; font-size: 0.65em; }
+        .title-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .title-bar::before {
+            content: '';
+            width: 5px;
+            height: 30px;
+            background: #fbbf24;
+            margin-right: 12px;
+            border-radius: 3px;
+        }
+        .tagline {
+            background: rgba(255,255,255,0.9);
+            color: #1f2937;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            font-style: italic;
+            margin: 12px 0;
+            font-size: 0.75em;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 12px;
+        }
+        .tech-item {
+            background: rgba(255,255,255,0.95);
+            color: #1f2937;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .tech-item .icon { font-size: 1.5em; margin-bottom: 6px; }
+        .tech-item strong { font-size: 0.75em; }
+        .tech-item p { font-size: 0.6em !important; margin: 4px 0 0 0; }
+        .feature-list li::marker { content: '✓ '; color: #10b981; }
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .category-tag {
+            background: var(--accent);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.7em;
+        }
+        .arch-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .arch-box {
+            background: rgba(255,255,255,0.95);
+            color: #1f2937;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 90px;
+        }
+        .arch-box div { font-size: 1.3em !important; }
+        .arch-box strong { font-size: 0.7em; }
+        .arch-box small { font-size: 0.55em; }
+        .arch-arrow {
+            font-size: 1.3em;
+            color: #fbbf24;
+        }
+        .gear-decoration {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 100px;
+        }
+        .gear-tl { top: -30px; left: -30px; }
+        .gear-br { bottom: -30px; right: -30px; }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .flow-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .flow-step {
+            background: rgba(255,255,255,0.95);
+            color: #1f2937;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.65em;
+            text-align: center;
+        }
+        .flow-arrow { color: #fbbf24; font-size: 1.2em; }
+        table { font-size: 0.6em; }
+        table th, table td { padding: 6px !important; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1: Introduction -->
+            <section>
+                <span class="gear-decoration gear-tl">⚙️</span>
+                <div class="title-bar"><h2>INTRODUCTION</h2></div>
+                <h1 style="font-size: 3em;">📖 StoriesOfUs</h1>
+                <p style="font-size: 1.3em;">Social Issue Storytelling Platform</p>
+                <div class="tagline">
+                    "Empowering Voices, Inspiring Change:<br>
+                    Share Your Story, Transform Communities."
+                </div>
+                <p style="margin-top: 40px; font-size: 1.1em;">A Web Application for Social Awareness</p>
+            </section>
+
+            <!-- Slide 2: Abstract -->
+            <section>
+                <span class="gear-decoration gear-tl">⚙️</span>
+                <div class="title-bar"><h2>ABSTRACT</h2></div>
+                <div class="content-box">
+                    <ul>
+                        <li><strong>StoriesOfUs</strong> is a comprehensive storytelling platform that enables users to share real-life experiences related to social issues including mental health, discrimination, inequality, and social challenges.</li>
+                        <li>The platform features <strong>user authentication</strong>, <strong>media uploads</strong> (images/videos), <strong>real-time chat</strong>, and a <strong>friends system</strong> for community building.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 3: Problem Statement -->
+            <section>
+                <span class="gear-decoration gear-br">⚙️</span>
+                <div class="title-bar"><h2>PROBLEM STATEMENT</h2></div>
+                <div class="content-box">
+                    <ul>
+                        <li><strong>Lack of Safe Spaces:</strong> Many individuals facing social challenges lack platforms to share experiences without judgment.</li>
+                        <li><strong>Awareness Gap:</strong> Social issues often remain hidden due to stigma, preventing community understanding and support.</li>
+                        <li><strong>Disconnected Communities:</strong> People experiencing similar challenges often feel isolated, unaware others share their struggles.</li>
+                        <li><strong>Need for Anonymity:</strong> Fear of identification prevents many from speaking up about sensitive topics.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 4: Features -->
+            <section>
+                <span class="gear-decoration gear-tl">⚙️</span>
+                <div class="title-bar"><h2>KEY FEATURES</h2></div>
+                <div class="two-column">
+                    <div class="content-box">
+                        <h3 style="color: #1f2937; margin: 0 0 8px 0; font-size: 0.85em;">📝 Story Features</h3>
+                        <ul class="feature-list">
+                            <li><strong>Story Submission:</strong> Share experiences with text</li>
+                            <li><strong>Media Uploads:</strong> Add images & videos (up to 5 files)</li>
+                            <li><strong>Category Organization:</strong> Filter by topic</li>
+                            <li><strong>Anonymous Posting:</strong> Privacy protection</li>
+                        </ul>
+                    </div>
+                    <div class="content-box">
+                        <h3 style="color: #1f2937; margin: 0 0 8px 0; font-size: 0.85em;">👥 Social Features</h3>
+                        <ul class="feature-list">
+                            <li><strong>User Authentication:</strong> Secure login/signup</li>
+                            <li><strong>Friends System:</strong> Connect with other users</li>
+                            <li><strong>Real-time Chat:</strong> Socket.IO powered messaging</li>
+                            <li><strong>Online Status:</strong> See who's online</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Categories -->
+            <section>
+                <span class="gear-decoration gear-br">⚙️</span>
+                <div class="title-bar"><h2>STORY CATEGORIES</h2></div>
+                <div class="content-box" style="text-align: center;">
+                    <p style="margin-bottom: 20px;">Stories are organized into meaningful categories:</p>
+                    <div class="category-tags" style="justify-content: center;">
+                        <span class="category-tag">🧠 Mental Health</span>
+                        <span class="category-tag">✊ Discrimination</span>
+                        <span class="category-tag">⚖️ Inequality</span>
+                        <span class="category-tag">🌍 Social Challenges</span>
+                        <span class="category-tag">📖 Other</span>
+                    </div>
+                    <p style="margin-top: 30px; color: #6b7280;">Each category helps users find and connect with relevant experiences</p>
+                </div>
+            </section>
+
+            <!-- Slide 6: User Flow -->
+            <section>
+                <span class="gear-decoration gear-tl">⚙️</span>
+                <div class="title-bar"><h2>USER FLOW</h2></div>
+                <div class="content-box" style="text-align: center;">
+                    <p style="margin-bottom: 15px;"><strong>How users interact with StoriesOfUs:</strong></p>
+                    <div class="flow-diagram">
+                        <div class="flow-step">🏠<br><strong>Visit Home</strong></div>
+                        <span class="flow-arrow">→</span>
+                        <div class="flow-step">📚<br><strong>Browse Stories</strong></div>
+                        <span class="flow-arrow">→</span>
+                        <div class="flow-step">🔍<br><strong>Filter by Category</strong></div>
+                        <span class="flow-arrow">→</span>
+                        <div class="flow-step">📖<br><strong>Read Story</strong></div>
+                        <span class="flow-arrow">→</span>
+                        <div class="flow-step">❤️<br><strong>Like & Engage</strong></div>
+                    </div>
+                    <div class="flow-diagram" style="margin-top: 20px;">
+                        <div class="flow-step" style="background: #dbeafe;">✍️<br><strong>Share Story</strong></div>
+                        <span class="flow-arrow">→</span>
+                        <div class="flow-step" style="background: #dbeafe;">📝<br><strong>Fill Form</strong></div>
+                        <span class="flow-arrow">→</span>
+                        <div class="flow-step" style="background: #dbeafe;">🏷️<br><strong>Select Category</strong></div>
+                        <span class="flow-arrow">→</span>
+                        <div class="flow-step" style="background: #dbeafe;">✅<br><strong>Submit</strong></div>
+                        <span class="flow-arrow">→</span>
+                        <div class="flow-step" style="background: #dbeafe;">🎉<br><strong>Published!</strong></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Data Model -->
+            <section>
+                <span class="gear-decoration gear-br">⚙️</span>
+                <div class="title-bar"><h2>DATA MODEL</h2></div>
+                <div class="tech-grid">
+                    <div class="content-box" style="padding: 12px;">
+                        <h3 style="color: #1f2937; margin: 0 0 6px 0; font-size: 0.75em;">📖 Story</h3>
+                        <ul style="font-size: 0.55em;">
+                            <li>title, content, author</li>
+                            <li>category, featured, likes</li>
+                            <li><strong>media[]:</strong> {type, url}</li>
+                        </ul>
+                    </div>
+                    <div class="content-box" style="padding: 12px;">
+                        <h3 style="color: #1f2937; margin: 0 0 6px 0; font-size: 0.75em;">👤 User</h3>
+                        <ul style="font-size: 0.55em;">
+                            <li>name, email</li>
+                            <li>password (bcrypt)</li>
+                            <li><strong>friends[]:</strong> User refs</li>
+                        </ul>
+                    </div>
+                    <div class="content-box" style="padding: 12px;">
+                        <h3 style="color: #1f2937; margin: 0 0 6px 0; font-size: 0.75em;">💬 Message</h3>
+                        <ul style="font-size: 0.55em;">
+                            <li>sender, receiver (refs)</li>
+                            <li>content, read</li>
+                            <li>createdAt timestamp</li>
+                        </ul>
+                    </div>
+                    <div class="content-box" style="padding: 12px;">
+                        <h3 style="color: #1f2937; margin: 0 0 6px 0; font-size: 0.75em;">🏷️ Category</h3>
+                        <ul style="font-size: 0.55em;">
+                            <li>name, slug, description</li>
+                            <li>icon (emoji)</li>
+                            <li>color (hex)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-box" style="margin-top: 10px; text-align: center; padding: 10px;">
+                    <strong>Just MONGODB for Passwords</strong>
+                </div>
+            </section>
+
+            <!-- Slide 8: Application Pages -->
+            <section>
+                <span class="gear-decoration gear-tl">⚙️</span>
+                <div class="title-bar"><h2>APPLICATION PAGES</h2></div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="icon">🏠</div>
+                        <strong>Home</strong>
+                        <p>Featured stories & grid</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">📚</div>
+                        <strong>Stories</strong>
+                        <p>Browse & filter</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">📖</div>
+                        <strong>Story Detail</strong>
+                        <p>Full view + media gallery</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">✍️</div>
+                        <strong>Submit Story</strong>
+                        <p>Form + media upload</p>
+                    </div>
+                </div>
+                <div class="tech-grid" style="margin-top: 12px;">
+                    <div class="tech-item" style="background: #dbeafe;">
+                        <div class="icon">🔐</div>
+                        <strong>Login</strong>
+                        <p>Email & password auth</p>
+                    </div>
+                    <div class="tech-item" style="background: #dbeafe;">
+                        <div class="icon">📝</div>
+                        <strong>Signup</strong>
+                        <p>New user registration</p>
+                    </div>
+                    <div class="tech-item" style="background: #dcfce7;">
+                        <div class="icon">💬</div>
+                        <strong>Chat</strong>
+                        <p>Real-time messaging</p>
+                    </div>
+                    <div class="tech-item" style="background: #dcfce7;">
+                        <div class="icon">👥</div>
+                        <strong>Friends</strong>
+                        <p>Online status & list</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Architecture -->
+            <section>
+                <span class="gear-decoration gear-br">⚙️</span>
+                <div class="title-bar"><h2>SYSTEM ARCHITECTURE</h2></div>
+                <div class="content-box">
+                    <div class="arch-diagram">
+                        <div class="arch-box">
+                            <div style="font-size: 1.3em;">🖥️</div>
+                            <strong>React Frontend</strong><br>
+                            <small>User Interface</small>
+                        </div>
+                        <span class="arch-arrow">⟷</span>
+                        <div class="arch-box">
+                            <div style="font-size: 1.3em;">⚡</div>
+                            <strong>Express.js</strong><br>
+                            <small>REST API</small>
+                        </div>
+                        <span class="arch-arrow">⟷</span>
+                        <div class="arch-box">
+                            <div style="font-size: 1.3em;">🔌</div>
+                            <strong>Socket.IO</strong><br>
+                            <small>Real-time</small>
+                        </div>
+                        <span class="arch-arrow">⟷</span>
+                        <div class="arch-box">
+                            <div style="font-size: 1.3em;">🗄️</div>
+                            <strong>MongoDB</strong><br>
+                            <small>Database</small>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Frontend:</strong> React.js + React Router + Context API for state</li>
+                        <li><strong>Backend:</strong> Node.js + Express.js + Socket.IO for real-time chat</li>
+                        <li><strong>Auth:</strong> MongoDB for password storage</li>
+                        <li><strong>Media:</strong> Multer for file uploads (images/videos)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 10: How It Works -->
+            <section>
+                <span class="gear-decoration gear-tl">⚙️</span>
+                <div class="title-bar"><h2>HOW IT WORKS</h2></div>
+                <div class="content-box">
+                    <div class="two-column">
+                        <div>
+                            <h3 style="color: #1f2937; margin: 0 0 8px 0; font-size: 0.85em;">📤 Submitting a Story</h3>
+                            <ol style="padding-left: 18px; margin: 0;">
+                                <li>User clicks "Share Your Story"</li>
+                                <li>Fills in title, content, category</li>
+                                <li>Optionally adds name (or stays anonymous)</li>
+                                <li>Form submits POST request to API</li>
+                                <li>Story saved to MongoDB</li>
+                                <li>User redirected to homepage</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h3 style="color: #1f2937; margin: 0 0 8px 0; font-size: 0.85em;">📥 Reading Stories</h3>
+                            <ol style="padding-left: 18px; margin: 0;">
+                                <li>Homepage fetches stories via API</li>
+                                <li>Stories displayed in responsive grid</li>
+                                <li>User filters by category</li>
+                                <li>Clicks story card for full view</li>
+                                <li>Can like to show support</li>
+                                <li>Like count updates in real-time</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Technology Stack -->
+            <section>
+                <span class="gear-decoration gear-br">⚙️</span>
+                <div class="title-bar"><h2>TECHNOLOGY STACK</h2></div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="icon">⚛️</div>
+                        <strong>React.js</strong>
+                        <p>Frontend + Router</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">🟢</div>
+                        <strong>Node.js</strong>
+                        <p>Runtime</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">🚂</div>
+                        <strong>Express.js</strong>
+                        <p>REST API</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">🍃</div>
+                        <strong>MongoDB</strong>
+                        <p>Database</p>
+                    </div>
+                </div>
+                <div class="tech-grid" style="margin-top: 10px;">
+                    <div class="tech-item">
+                        <div class="icon">🔌</div>
+                        <strong>Socket.IO</strong>
+                        <p>Real-time Chat</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">🔐</div>
+                        <strong>Auth</strong>
+                        <p>Login/Signup</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">📁</div>
+                        <strong>Multer</strong>
+                        <p>File Uploads</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="icon">🐳</div>
+                        <strong>Docker</strong>
+                        <p>Containerization</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: API Endpoints -->
+            <section>
+                <span class="gear-decoration gear-tl">⚙️</span>
+                <div class="title-bar"><h2>API ENDPOINTS</h2></div>
+                <div class="two-column">
+                    <div class="content-box" style="padding: 12px;">
+                        <h3 style="color: #1f2937; margin: 0 0 6px 0; font-size: 0.75em;">📖 Stories & Categories</h3>
+                        <ul style="font-size: 0.55em;">
+                            <li><span style="color:#10b981">GET</span> /api/stories - List all</li>
+                            <li><span style="color:#10b981">GET</span> /api/stories/:id - Single story</li>
+                            <li><span style="color:#3b82f6">POST</span> /api/stories - Create (+ media)</li>
+                            <li><span style="color:#f59e0b">PATCH</span> /api/stories/:id/like</li>
+                            <li><span style="color:#10b981">GET</span> /api/categories</li>
+                        </ul>
+                    </div>
+                    <div class="content-box" style="padding: 12px;">
+                        <h3 style="color: #1f2937; margin: 0 0 6px 0; font-size: 0.75em;">🔐 Authentication</h3>
+                        <ul style="font-size: 0.55em;">
+                            <li><span style="color:#3b82f6">POST</span> /api/auth/register - Sign up</li>
+                            <li><span style="color:#3b82f6">POST</span> /api/auth/login - Login</li>
+                            <li><span style="color:#10b981">GET</span> /api/auth/me - Current user</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="two-column" style="margin-top: 10px;">
+                    <div class="content-box" style="padding: 12px;">
+                        <h3 style="color: #1f2937; margin: 0 0 6px 0; font-size: 0.75em;">👥 Friends</h3>
+                        <ul style="font-size: 0.55em;">
+                            <li><span style="color:#10b981">GET</span> /api/friends - List friends</li>
+                            <li><span style="color:#10b981">GET</span> /api/friends/search - Search users</li>
+                            <li><span style="color:#3b82f6">POST</span> /api/friends/add/:userId</li>
+                            <li><span style="color:#ef4444">DELETE</span> /api/friends/remove/:userId</li>
+                        </ul>
+                    </div>
+                    <div class="content-box" style="padding: 12px;">
+                        <h3 style="color: #1f2937; margin: 0 0 6px 0; font-size: 0.75em;">💬 Chat (REST + Socket.IO)</h3>
+                        <ul style="font-size: 0.55em;">
+                            <li><span style="color:#10b981">GET</span> /api/chat/:userId - Messages</li>
+                            <li><span style="color:#3b82f6">POST</span> /api/chat/:userId - Send</li>
+                            <li>🔌 user_online, send_message</li>
+                            <li>🔌 receive_message, online_users</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Future Scope -->
+            <section>
+                <span class="gear-decoration gear-br">⚙️</span>
+                <div class="title-bar"><h2>IMPLEMENTED & FUTURE SCOPE</h2></div>
+                <div class="two-column">
+                    <div class="content-box" style="background: #dcfce7;">
+                        <h3 style="color: #166534; margin: 0 0 8px 0; font-size: 0.85em;">✅ Implemented</h3>
+                        <ul>
+                            <li><strong>User Authentication:</strong> Login/signup ✓</li>
+                            <li><strong>Media Uploads:</strong> Images & videos ✓</li>
+                            <li><strong>Real-time Chat:</strong> Socket.IO messaging ✓</li>
+                            <li><strong>Friends System:</strong> Add & manage friends ✓</li>
+                            <li><strong>Modern UI:</strong> Dark theme + glassmorphism ✓</li>
+                        </ul>
+                    </div>
+                    <div class="content-box">
+                        <h3 style="color: #1f2937; margin: 0 0 8px 0; font-size: 0.85em;">🎯 Future Enhancements</h3>
+                        <ul>
+                            <li><strong>Comments:</strong> Story discussions</li>
+                            <li><strong>Search:</strong> Full-text search</li>
+                            <li><strong>AI Moderation:</strong> Content safety</li>
+                            <li><strong>Notifications:</strong> Push alerts</li>
+                            <li><strong>Mobile App:</strong> iOS & Android</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 14: Conclusion -->
+            <section>
+                <span class="gear-decoration gear-tl">⚙️</span>
+                <span class="gear-decoration gear-br">⚙️</span>
+                <div class="title-bar"><h2>CONCLUSION</h2></div>
+                <div class="content-box" style="text-align: center;">
+                    <p style="margin-bottom: 12px;">
+                        <strong>StoriesOfUs</strong> bridges the gap between individuals and communities by providing a platform for authentic storytelling about social issues.
+                    </p>
+                    <p style="color: #6b7280;">
+                        Through shared experiences, we build understanding, reduce stigma, and inspire collective action for positive change.
+                    </p>
+                </div>
+                <div class="tagline" style="margin-top: 20px;">
+                    "Every story shared is a step toward a more empathetic world."
+                </div>
+                <h2 style="margin-top: 25px;">Thank You! 🙏</h2>
+                <p style="font-size: 0.7em; margin-top: 10px;">Questions?</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            backgroundTransition: 'fade'
+        });
+    </script>
+</body>
+</html>
+

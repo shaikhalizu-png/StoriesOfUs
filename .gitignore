@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables (keep secrets safe)
+.env
+**/.env
+
+# React build output (Render will build this)
+frontend/build/
+backend/public/
+
+# Logs
+*.log
+nohup.out
+/tmp/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
